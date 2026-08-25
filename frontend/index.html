@@ -1,0 +1,2472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        HealthRisk AI | Clinical Risk Platform
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- MOBILE OVERLAY -->
+
+<div
+    id="sidebarOverlay"
+    class="sidebar-overlay"
+></div>
+
+
+<div class="app">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        id="sidebar"
+        class="sidebar"
+    >
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <div class="logo-box">
+                +
+            </div>
+
+            <div class="logo-text">
+
+                <h2>
+                    HealthRisk
+                </h2>
+
+                <span>
+                    AI PLATFORM
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLOSE BUTTON MOBILE -->
+
+        <button
+            id="closeSidebar"
+            class="close-sidebar"
+        >
+            ×
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navigation">
+
+
+            <p class="nav-title">
+                MAIN
+            </p>
+
+
+            <button
+                class="nav-item active"
+                data-page="dashboard"
+            >
+
+                <span class="nav-icon">
+                    ▦
+                </span>
+
+                <span class="nav-label">
+                    Dashboard
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="assessment"
+            >
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span class="nav-label">
+                    Patient Assessment
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="patients"
+            >
+
+                <span class="nav-icon">
+                    ◉
+                </span>
+
+                <span class="nav-label">
+                    Patients
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="analytics"
+            >
+
+                <span class="nav-icon">
+                    ▥
+                </span>
+
+                <span class="nav-label">
+                    Analytics
+                </span>
+
+            </button>
+
+
+            <p class="nav-title system-title">
+                SYSTEM
+            </p>
+
+
+            <button
+                class="nav-item"
+                data-page="models"
+            >
+
+                <span class="nav-icon">
+                    ◈
+                </span>
+
+                <span class="nav-label">
+                    ML Models
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="monitoring"
+            >
+
+                <span class="nav-icon">
+                    ◌
+                </span>
+
+                <span class="nav-label">
+                    Monitoring
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="settings"
+            >
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span class="nav-label">
+                    Settings
+                </span>
+
+            </button>
+
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <div class="secure-box">
+
+                <div class="secure-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        Secure System
+                    </strong>
+
+                    <small>
+                        Protected environment
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+                <button
+                    id="menuButton"
+                    class="menu-button"
+                >
+                    ☰
+                </button>
+
+
+                <div class="mobile-logo">
+                    HealthRisk AI
+                </div>
+
+
+                <div class="search">
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        id="globalSearch"
+                        type="text"
+                        placeholder="Search patients..."
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="top-actions">
+
+
+                <div
+                    id="notificationButton"
+                    class="notification"
+                >
+
+                    🔔
+
+                    <span class="notification-dot">
+                    </span>
+
+                </div>
+
+
+                <div class="doctor">
+
+                    <div class="avatar">
+                        DA
+                    </div>
+
+                    <div class="doctor-info">
+
+                        <strong>
+                            Dr. Admin
+                        </strong>
+
+                        <span>
+                            Clinical User
+                        </span>
+
+                    </div>
+
+                    <span class="doctor-arrow">
+                        ⌄
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE CONTAINER
+        ================================================== -->
+
+        <div class="content">
+
+
+            <!-- =================================================
+                 DASHBOARD PAGE
+            ================================================== -->
+
+            <section
+                id="page-dashboard"
+                class="page active-page"
+            >
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <div class="breadcrumb">
+                            Clinical Platform
+                            <span>/</span>
+                            Dashboard
+                        </div>
+
+                        <h1>
+                            Clinical Dashboard
+                        </h1>
+
+                        <p>
+                            Overview of patient risk and AI
+                            prediction activity.
+                        </p>
+
+                    </div>
+
+
+                    <div class="system-online">
+
+                        <span></span>
+
+                        AI Engine Online
+
+                    </div>
+
+                </div>
+
+
+                <!-- DASHBOARD CARDS -->
+
+                <div class="stats">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Total Assessments
+                            </span>
+
+                            <strong id="totalAssessments">
+                                0
+                            </strong>
+
+                            <small>
+                                AI assessments performed
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon red">
+                            !
+                        </div>
+
+                        <div>
+
+                            <span>
+                                High Risk
+                            </span>
+
+                            <strong id="highRiskCount">
+                                0
+                            </strong>
+
+                            <small>
+                                Patients requiring attention
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Low Risk
+                            </span>
+
+                            <strong id="lowRiskCount">
+                                0
+                            </strong>
+
+                            <small>
+                                Lower estimated risk
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            ◈
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Model
+                            </span>
+
+                            <strong>
+                                XGBoost
+                            </strong>
+
+                            <small>
+                                Production classifier
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- DASHBOARD CONTENT -->
+
+                <div class="dashboard-grid">
+
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    PATIENT RISK
+                                </span>
+
+                                <h2>
+                                    Recent Assessments
+                                </h2>
+
+                            </div>
+
+
+                            <button
+                                class="small-button"
+                                data-page-target="patients"
+                            >
+                                View All
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="dashboardPatients"
+                            class="recent-list"
+                        >
+
+                            <div class="empty-dashboard">
+
+                                <div>
+                                    ◉
+                                </div>
+
+                                <h3>
+                                    No assessments yet
+                                </h3>
+
+                                <p>
+                                    Run your first patient
+                                    assessment to see results here.
+                                </p>
+
+                                <button
+                                    class="primary-button small"
+                                    data-page-target="assessment"
+                                >
+                                    Start Assessment
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    SYSTEM
+                                </span>
+
+                                <h2>
+                                    Platform Status
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="status-list">
+
+
+                            <div class="status-row">
+
+                                <div>
+
+                                    <strong>
+                                        API Server
+                                    </strong>
+
+                                    <span>
+                                        FastAPI prediction service
+                                    </span>
+
+                                </div>
+
+                                <b class="status-good">
+                                    Online
+                                </b>
+
+                            </div>
+
+
+                            <div class="status-row">
+
+                                <div>
+
+                                    <strong>
+                                        ML Model
+                                    </strong>
+
+                                    <span>
+                                        XGBoost classifier
+                                    </span>
+
+                                </div>
+
+                                <b class="status-good">
+                                    Loaded
+                                </b>
+
+                            </div>
+
+
+                            <div class="status-row">
+
+                                <div>
+
+                                    <strong>
+                                        Prediction Engine
+                                    </strong>
+
+                                    <span>
+                                        Real-time inference
+                                    </span>
+
+                                </div>
+
+                                <b class="status-good">
+                                    Ready
+                                </b>
+
+                            </div>
+
+
+                            <div class="status-row">
+
+                                <div>
+
+                                    <strong>
+                                        Explainability
+                                    </strong>
+
+                                    <span>
+                                        Clinical interpretation
+                                    </span>
+
+                                </div>
+
+                                <b class="status-warning">
+                                    Demo
+                                </b>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 ASSESSMENT PAGE
+            ================================================== -->
+
+            <section
+                id="page-assessment"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <div class="breadcrumb">
+                            Clinical Platform
+                            <span>/</span>
+                            Patient Assessment
+                        </div>
+
+                        <h1>
+                            Clinical Risk Assessment
+                        </h1>
+
+                        <p>
+                            Enter patient measurements to
+                            calculate estimated diabetes risk.
+                        </p>
+
+                    </div>
+
+
+                    <div class="system-online">
+
+                        <span></span>
+
+                        AI Engine Online
+
+                    </div>
+
+                </div>
+
+
+                <div class="assessment-grid">
+
+
+                    <!-- FORM -->
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    PATIENT DATA
+                                </span>
+
+                                <h2>
+                                    Patient Information
+                                </h2>
+
+                                <p>
+                                    Enter the patient's clinical
+                                    measurements.
+                                </p>
+
+                            </div>
+
+
+                            <div class="panel-icon">
+                                ♙
+                            </div>
+
+                        </div>
+
+
+                        <form
+                            id="predictionForm"
+                        >
+
+
+                            <div class="input-group">
+
+                                <label>
+                                    Pregnancies
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input
+                                        type="number"
+                                        id="pregnancies"
+                                        min="0"
+                                        placeholder="0"
+                                        required
+                                    >
+
+                                    <span>
+                                        count
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>
+                                    Age
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input
+                                        type="number"
+                                        id="age"
+                                        min="1"
+                                        placeholder="30"
+                                        required
+                                    >
+
+                                    <span>
+                                        years
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>
+                                    Glucose
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input
+                                        type="number"
+                                        id="glucose"
+                                        step="0.1"
+                                        placeholder="120"
+                                        required
+                                    >
+
+                                    <span>
+                                        mg/dL
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>
+                                    Blood Pressure
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input
+                                        type="number"
+                                        id="blood_pressure"
+                                        step="0.1"
+                                        placeholder="70"
+                                        required
+                                    >
+
+                                    <span>
+                                        mmHg
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>
+                                    Skin Thickness
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input
+                                        type="number"
+                                        id="skin_thickness"
+                                        step="0.1"
+                                        placeholder="20"
+                                        required
+                                    >
+
+                                    <span>
+                                        mm
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>
+                                    Insulin
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input
+                                        type="number"
+                                        id="insulin"
+                                        step="0.1"
+                                        placeholder="80"
+                                        required
+                                    >
+
+                                    <span>
+                                        μU/mL
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>
+                                    BMI
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input
+                                        type="number"
+                                        id="bmi"
+                                        step="0.1"
+                                        placeholder="25"
+                                        required
+                                    >
+
+                                    <span>
+                                        kg/m²
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>
+                                    Diabetes Pedigree
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input
+                                        type="number"
+                                        id="diabetes_pedigree"
+                                        step="0.001"
+                                        placeholder="0.500"
+                                        required
+                                    >
+
+                                    <span>
+                                        index
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-actions">
+
+                                <button
+                                    type="button"
+                                    id="clearButton"
+                                    class="secondary-button"
+                                >
+                                    Reset
+                                </button>
+
+
+                                <button
+                                    type="submit"
+                                    id="predictButton"
+                                    class="primary-button"
+                                >
+
+                                    <span id="buttonText">
+                                        Run Risk Assessment
+                                    </span>
+
+                                    <span
+                                        id="loadingSpinner"
+                                        class="spinner hidden"
+                                    ></span>
+
+                                </button>
+
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                    <!-- RESULT -->
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    AI ANALYSIS
+                                </span>
+
+                                <h2>
+                                    Risk Assessment
+                                </h2>
+
+                                <p>
+                                    Machine learning prediction.
+                                </p>
+
+                            </div>
+
+
+                            <div class="ai-badge">
+                                AI
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="initialResult"
+                            class="empty-state"
+                        >
+
+                            <div class="empty-icon">
+                                ✦
+                            </div>
+
+                            <h3>
+                                Ready for Assessment
+                            </h3>
+
+                            <p>
+                                Enter patient information and
+                                run the AI assessment.
+                            </p>
+
+                            <div class="model-tag">
+                                XGBoost • Diabetes Risk Model
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="predictionResult"
+                            class="prediction-result hidden"
+                        >
+
+
+                            <div class="risk-header">
+
+                                <span>
+                                    ESTIMATED DISEASE RISK
+                                </span>
+
+                                <div
+                                    id="riskStatus"
+                                    class="risk-status"
+                                >
+                                    ● Analyzed
+                                </div>
+
+                            </div>
+
+
+                            <div class="risk-display">
+
+
+                                <div
+                                    id="riskCircle"
+                                    class="risk-circle"
+                                >
+
+                                    <div>
+
+                                        <strong
+                                            id="probability"
+                                        >
+                                            0%
+                                        </strong>
+
+                                        <span>
+                                            probability
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="risk-description">
+
+                                    <span>
+                                        Risk Classification
+                                    </span>
+
+                                    <h3 id="riskLevel">
+                                        -
+                                    </h3>
+
+                                    <p>
+                                        Based on the clinical
+                                        indicators provided.
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="result-grid">
+
+
+                                <div class="result-item">
+
+                                    <span>
+                                        Probability
+                                    </span>
+
+                                    <strong
+                                        id="probabilityText"
+                                    >
+                                        0%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="result-item">
+
+                                    <span>
+                                        Prediction
+                                    </span>
+
+                                    <strong
+                                        id="predictionText"
+                                    >
+                                        -
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="result-item">
+
+                                    <span>
+                                        Model
+                                    </span>
+
+                                    <strong>
+                                        XGBoost
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div
+                                id="alertBox"
+                                class="clinical-alert"
+                            >
+
+                                <div class="alert-icon">
+                                    !
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        CLINICAL INTERPRETATION
+                                    </span>
+
+                                    <p id="message">
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 PATIENTS PAGE
+            ================================================== -->
+
+            <section
+                id="page-patients"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <div class="breadcrumb">
+                            Clinical Platform
+                            <span>/</span>
+                            Patients
+                        </div>
+
+                        <h1>
+                            Patient Records
+                        </h1>
+
+                        <p>
+                            Patients assessed by the AI platform.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-button"
+                        data-page-target="assessment"
+                    >
+                        + New Assessment
+                    </button>
+
+                </div>
+
+
+                <div class="panel">
+
+
+                    <div class="table-toolbar">
+
+                        <div>
+
+                            <h2>
+                                Assessment History
+                            </h2>
+
+                            <p>
+                                Recent patient risk assessments.
+                            </p>
+
+                        </div>
+
+
+                        <input
+                            id="patientSearch"
+                            class="table-search"
+                            placeholder="Search records..."
+                        >
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Patient
+                                    </th>
+
+                                    <th>
+                                        Age
+                                    </th>
+
+                                    <th>
+                                        Glucose
+                                    </th>
+
+                                    <th>
+                                        BMI
+                                    </th>
+
+                                    <th>
+                                        Risk
+                                    </th>
+
+                                    <th>
+                                        Probability
+                                    </th>
+
+                                    <th>
+                                        Prediction
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody
+                                id="patientTableBody"
+                            >
+
+                                <tr>
+
+                                    <td
+                                        colspan="7"
+                                        class="no-data"
+                                    >
+                                        No patient assessments
+                                        available.
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 ANALYTICS PAGE
+            ================================================== -->
+
+            <section
+                id="page-analytics"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <div class="breadcrumb">
+                            Clinical Platform
+                            <span>/</span>
+                            Analytics
+                        </div>
+
+                        <h1>
+                            Population Analytics
+                        </h1>
+
+                        <p>
+                            Overview of prediction activity and
+                            patient risk distribution.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="analytics-cards">
+
+
+                    <div class="analytics-card">
+
+                        <span>
+                            Total Patients
+                        </span>
+
+                        <strong id="analyticsTotal">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="analytics-card">
+
+                        <span>
+                            Positive Predictions
+                        </span>
+
+                        <strong id="analyticsPositive">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="analytics-card">
+
+                        <span>
+                            Average Risk
+                        </span>
+
+                        <strong id="analyticsAverage">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="analytics-card">
+
+                        <span>
+                            High Risk Percentage
+                        </span>
+
+                        <strong id="analyticsHigh">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="analytics-grid">
+
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    RISK DISTRIBUTION
+                                </span>
+
+                                <h2>
+                                    Patient Risk Levels
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="risk-bars">
+
+
+                            <div class="bar-row">
+
+                                <div>
+
+                                    <span>
+                                        Low Risk
+                                    </span>
+
+                                    <strong
+                                        id="lowPercent"
+                                    >
+                                        0%
+                                    </strong>
+
+                                </div>
+
+                                <div class="bar">
+
+                                    <div
+                                        id="lowBar"
+                                        class="bar-fill low"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="bar-row">
+
+                                <div>
+
+                                    <span>
+                                        Moderate Risk
+                                    </span>
+
+                                    <strong
+                                        id="moderatePercent"
+                                    >
+                                        0%
+                                    </strong>
+
+                                </div>
+
+                                <div class="bar">
+
+                                    <div
+                                        id="moderateBar"
+                                        class="bar-fill moderate"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="bar-row">
+
+                                <div>
+
+                                    <span>
+                                        High Risk
+                                    </span>
+
+                                    <strong
+                                        id="highPercent"
+                                    >
+                                        0%
+                                    </strong>
+
+                                </div>
+
+                                <div class="bar">
+
+                                    <div
+                                        id="highBar"
+                                        class="bar-fill high"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="bar-row">
+
+                                <div>
+
+                                    <span>
+                                        Critical Risk
+                                    </span>
+
+                                    <strong
+                                        id="criticalPercent"
+                                    >
+                                        0%
+                                    </strong>
+
+                                </div>
+
+                                <div class="bar">
+
+                                    <div
+                                        id="criticalBar"
+                                        class="bar-fill critical"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    MODEL PERFORMANCE
+                                </span>
+
+                                <h2>
+                                    Current Model
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="performance-list">
+
+
+                            <div>
+
+                                <span>
+                                    Model
+                                </span>
+
+                                <strong>
+                                    XGBoost
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Accuracy
+                                </span>
+
+                                <strong>
+                                    78.4%
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Classification
+                                </span>
+
+                                <strong>
+                                    Binary
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Features
+                                </span>
+
+                                <strong>
+                                    8
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 MODELS PAGE
+            ================================================== -->
+
+            <section
+                id="page-models"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <div class="breadcrumb">
+                            System
+                            <span>/</span>
+                            ML Models
+                        </div>
+
+                        <h1>
+                            Machine Learning Models
+                        </h1>
+
+                        <p>
+                            Models used by the clinical prediction
+                            platform.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="model-grid">
+
+
+                    <div class="model-card active-model">
+
+                        <div class="model-top">
+
+                            <div class="model-symbol">
+                                XG
+                            </div>
+
+                            <span class="production-badge">
+                                PRODUCTION
+                            </span>
+
+                        </div>
+
+                        <h2>
+                            XGBoost
+                        </h2>
+
+                        <p>
+                            Gradient boosting classifier used
+                            for diabetes risk prediction.
+                        </p>
+
+                        <div class="model-stats">
+
+                            <div>
+
+                                <span>
+                                    Accuracy
+                                </span>
+
+                                <strong>
+                                    78.4%
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Status
+                                </span>
+
+                                <strong>
+                                    Active
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="model-card">
+
+                        <div class="model-top">
+
+                            <div class="model-symbol">
+                                RF
+                            </div>
+
+                            <span class="testing-badge">
+                                AVAILABLE
+                            </span>
+
+                        </div>
+
+                        <h2>
+                            Random Forest
+                        </h2>
+
+                        <p>
+                            Ensemble tree-based classification
+                            model for comparison.
+                        </p>
+
+                        <div class="model-stats">
+
+                            <div>
+
+                                <span>
+                                    Type
+                                </span>
+
+                                <strong>
+                                    Ensemble
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Status
+                                </span>
+
+                                <strong>
+                                    Ready
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="model-card">
+
+                        <div class="model-top">
+
+                            <div class="model-symbol">
+                                LR
+                            </div>
+
+                            <span class="testing-badge">
+                                BASELINE
+                            </span>
+
+                        </div>
+
+                        <h2>
+                            Logistic Regression
+                        </h2>
+
+                        <p>
+                            Baseline statistical classification
+                            model.
+                        </p>
+
+                        <div class="model-stats">
+
+                            <div>
+
+                                <span>
+                                    Type
+                                </span>
+
+                                <strong>
+                                    Baseline
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Status
+                                </span>
+
+                                <strong>
+                                    Ready
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="model-card">
+
+                        <div class="model-top">
+
+                            <div class="model-symbol">
+                                LG
+                            </div>
+
+                            <span class="testing-badge">
+                                AVAILABLE
+                            </span>
+
+                        </div>
+
+                        <h2>
+                            LightGBM
+                        </h2>
+
+                        <p>
+                            Fast gradient boosting model prepared
+                            for future experiments.
+                        </p>
+
+                        <div class="model-stats">
+
+                            <div>
+
+                                <span>
+                                    Type
+                                </span>
+
+                                <strong>
+                                    Boosting
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Status
+                                </span>
+
+                                <strong>
+                                    Ready
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 MONITORING PAGE
+            ================================================== -->
+
+            <section
+                id="page-monitoring"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <div class="breadcrumb">
+                            System
+                            <span>/</span>
+                            Monitoring
+                        </div>
+
+                        <h1>
+                            System Monitoring
+                        </h1>
+
+                        <p>
+                            Monitor the health of the prediction
+                            platform.
+                        </p>
+
+                    </div>
+
+
+                    <div class="system-online">
+
+                        <span></span>
+
+                        All Systems Operational
+
+                    </div>
+
+                </div>
+
+
+                <div class="monitor-grid">
+
+
+                    <div class="monitor-card">
+
+                        <div class="monitor-icon green">
+                            ✓
+                        </div>
+
+                        <span>
+                            API Availability
+                        </span>
+
+                        <strong>
+                            Online
+                        </strong>
+
+                        <small>
+                            FastAPI service
+                        </small>
+
+                    </div>
+
+
+                    <div class="monitor-card">
+
+                        <div class="monitor-icon green">
+                            ✓
+                        </div>
+
+                        <span>
+                            ML Model
+                        </span>
+
+                        <strong>
+                            Loaded
+                        </strong>
+
+                        <small>
+                            XGBoost v1.0
+                        </small>
+
+                    </div>
+
+
+                    <div class="monitor-card">
+
+                        <div class="monitor-icon blue">
+                            ⚡
+                        </div>
+
+                        <span>
+                            Inference
+                        </span>
+
+                        <strong>
+                            &lt;100ms
+                        </strong>
+
+                        <small>
+                            Average response
+                        </small>
+
+                    </div>
+
+
+                    <div class="monitor-card">
+
+                        <div class="monitor-icon orange">
+                            ◌
+                        </div>
+
+                        <span>
+                            Data Drift
+                        </span>
+
+                        <strong>
+                            Monitoring
+                        </strong>
+
+                        <small>
+                            MLOps integration
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="panel monitoring-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                SYSTEM LOG
+                            </span>
+
+                            <h2>
+                                Recent Events
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-list">
+
+
+                        <div class="event">
+
+                            <span class="event-dot green-dot">
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    ML model loaded successfully
+                                </strong>
+
+                                <small>
+                                    Production prediction engine
+                                </small>
+
+                            </div>
+
+                            <time>
+                                Now
+                            </time>
+
+                        </div>
+
+
+                        <div class="event">
+
+                            <span class="event-dot blue-dot">
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    API service initialized
+                                </strong>
+
+                                <small>
+                                    FastAPI server ready
+                                </small>
+
+                            </div>
+
+                            <time>
+                                Today
+                            </time>
+
+                        </div>
+
+
+                        <div class="event">
+
+                            <span class="event-dot orange-dot">
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Monitoring system active
+                                </strong>
+
+                                <small>
+                                    Performance monitoring enabled
+                                </small>
+
+                            </div>
+
+                            <time>
+                                Today
+                            </time>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 SETTINGS PAGE
+            ================================================== -->
+
+            <section
+                id="page-settings"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <div class="breadcrumb">
+                            System
+                            <span>/</span>
+                            Settings
+                        </div>
+
+                        <h1>
+                            Platform Settings
+                        </h1>
+
+                        <p>
+                            Configure dashboard preferences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    PREFERENCES
+                                </span>
+
+                                <h2>
+                                    Application Settings
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div>
+
+                                <strong>
+                                    Clinical Alerts
+                                </strong>
+
+                                <span>
+                                    Show notifications for
+                                    high-risk patients.
+                                </span>
+
+                            </div>
+
+
+                            <label class="switch">
+
+                                <input
+                                    id="alertToggle"
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span
+                                    class="slider"
+                                ></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div>
+
+                                <strong>
+                                    AI Analysis
+                                </strong>
+
+                                <span>
+                                    Enable ML prediction results.
+                                </span>
+
+                            </div>
+
+
+                            <label class="switch">
+
+                                <input
+                                    id="aiToggle"
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span
+                                    class="slider"
+                                ></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-row">
+
+                            <div>
+
+                                <strong>
+                                    System Notifications
+                                </strong>
+
+                                <span>
+                                    Display platform status updates.
+                                </span>
+
+                            </div>
+
+
+                            <label class="switch">
+
+                                <input
+                                    id="notificationToggle"
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span
+                                    class="slider"
+                                ></span>
+
+                            </label>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    ABOUT
+                                </span>
+
+                                <h2>
+                                    Platform Information
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="about-list">
+
+
+                            <div>
+
+                                <span>
+                                    Platform
+                                </span>
+
+                                <strong>
+                                    HealthRisk AI
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Version
+                                </span>
+
+                                <strong>
+                                    1.0.0
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Backend
+                                </span>
+
+                                <strong>
+                                    FastAPI
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Machine Learning
+                                </span>
+
+                                <strong>
+                                    XGBoost
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Frontend
+                                </span>
+
+                                <strong>
+                                    HTML / CSS / JavaScript
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- DISCLAIMER -->
+
+            <div class="disclaimer">
+
+                <span>
+                    ⚠
+                </span>
+
+                <div>
+
+                    <strong>
+                        Clinical Decision Support Notice
+                    </strong>
+
+                    <p>
+                        This application is an educational
+                        machine-learning prototype. Predictions
+                        represent estimated risk and are not a
+                        medical diagnosis. Clinical decisions
+                        must be made by qualified healthcare
+                        professionals.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <footer>
+
+                HealthRisk AI Clinical Risk Prediction Platform
+
+                <span>•</span>
+
+                Educational ML Prototype
+
+                <span>•</span>
+
+                XGBoost Engine
+
+            </footer>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

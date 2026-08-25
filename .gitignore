@@ -1,28 +1,35 @@
-# Environment variables
-.env
-
-# Python virtual environment
-venv/
-.venv/
-
-# Python cache
+# Python
 __pycache__/
 *.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+.env.*
 
 # Jupyter
 .ipynb_checkpoints/
 
 # IDE
 .vscode/
+.idea/
 
-# Operating system
+# OS
 .DS_Store
 Thumbs.db
+
+# Python tools
+.pytest_cache/
+.mypy_cache/
 
 # Logs
 *.log
 
 # Local database files
 *.db
-*.sqlite
 *.sqlite3

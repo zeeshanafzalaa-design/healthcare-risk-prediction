@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 
 from sqlalchemy.orm import Session
 
-from src.database import get_db
+from src.database import get_db, engine, Base
 from src.db_models import Patient
 
 
@@ -38,7 +38,10 @@ app = FastAPI(
     description="Diabetes risk prediction API with PostgreSQL database",
     version="1.0.0"
 )
+from src.database import engine, Base
+from src.db_models import Patient
 
+Base.metadata.create_all(bind=engine)
 
 # ============================================================
 # 4. ENABLE CORS
